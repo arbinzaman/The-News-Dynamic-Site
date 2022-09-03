@@ -83,15 +83,6 @@ const displayCategories = categories =>{
         // console.log(newses.length);
     
 
-    //   number of news
-        // const numberOfNewsFound = document.getElementById('number-of-news');
-        // numberOfNewsFound.innerHTML='';
-        // const newsNumberDiv = document.createElement('div');
-        // newsNumberDiv.classList.add('text-center');
-        // newsNumberDiv.innerHTML=`
-        // <h1>${newses.length} News Found</h1>
-        // `;
-        // numberOfNewsFound.appendChild(newsNumberDiv) ;
 
 
         const newsDiv = document.createElement('div');
