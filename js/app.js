@@ -55,18 +55,26 @@ const displayCategories = categories =>{
 
          
 
- const noNewsFound = document.getElementById('no-news-found');
-    const displayNews = newses =>{
-        // console.log(newses);
-     
-       
-        if(newses.length === 0){
-            noNewsFound.classList.remove('d-none')
-        }
-        else{
-            noNewsFound.classList.add('d-none')
-        }
 
+    const displayNews = (newses , name) =>{
+        console.log(newses.length);
+        // news shorting
+        newses
+        .sort((a, b) => {
+          return a.total_view - b.total_view;
+        })
+        .reverse();
+        const noNewsFound = document.getElementById('no-news-found');
+        if(newses.length === 0){
+            noNewsFound.innerHTML = `
+            <h3 class="text-warning fw-bold text-center">No news Found!! Please try a new One.</h3>
+            `;
+          } else {
+            noNewsFound.innerHTML = `
+            <h3 class="text-success text-white mb-5 bg-secondary p-2">${newses.length} items found for category ${name}</h3>
+            `;
+          }
+       
 
         const newsList = document.getElementById('news-list');
         newsList.innerHTML='';
@@ -75,14 +83,14 @@ const displayCategories = categories =>{
     
 
     //   number of news
-        const numberOfNewsFound = document.getElementById('number-of-news');
-        numberOfNewsFound.innerHTML='';
-        const newsNumberDiv = document.createElement('div');
-        newsNumberDiv.classList.add('text-center');
-        newsNumberDiv.innerHTML=`
-        <h1>${newses.length} News Found</h1>
-        `;
-        numberOfNewsFound.appendChild(newsNumberDiv) ;
+        // const numberOfNewsFound = document.getElementById('number-of-news');
+        // numberOfNewsFound.innerHTML='';
+        // const newsNumberDiv = document.createElement('div');
+        // newsNumberDiv.classList.add('text-center');
+        // newsNumberDiv.innerHTML=`
+        // <h1>${newses.length} News Found</h1>
+        // `;
+        // numberOfNewsFound.appendChild(newsNumberDiv) ;
 
 
         const newsDiv = document.createElement('div');
