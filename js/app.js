@@ -133,13 +133,3 @@ const displayCategories = categories =>{
       };
 
       loadNewsDetails();
-
-
-// // display no news found
-//   const noNewsFound = document.getElementById('no-news-found');
-//   if(phone.length === 0){
-//       noNewsFound.classList.remove('d-none')
-//   }
-//   else{
-//       noNewsFound.classList.add('d-none')
-//   }
