@@ -65,6 +65,7 @@ const displayCategories = categories =>{
         })
         .reverse();
         const noNewsFound = document.getElementById('no-news-found');
+         //   number of news
         if(newses.length === 0){
             noNewsFound.innerHTML = `
             <h3 class="text-warning fw-bold text-center">No news Found!! Please try a new One.</h3>
