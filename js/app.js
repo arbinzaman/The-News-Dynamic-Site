@@ -57,7 +57,9 @@ const displayCategories = categories =>{
 
 
     const displayNews = (newses , name) =>{
-        console.log(newses.length);
+        // console.log(newses.length);
+      
+        
         // news shorting
         newses
         .sort((a, b) => {
@@ -103,11 +105,12 @@ const displayCategories = categories =>{
         newsList.appendChild(newsDiv) ;
     } );
     toggoleSpinner(false);
+   
 };
-        
+ 
+loadNews(allNews);
 
-
-    loadNews();
+  
     const loadNewsDetails = async (id) => {
         const url =  `https://openapi.programming-hero.com/api/news/${id}`;
         try {
@@ -133,3 +136,4 @@ const displayCategories = categories =>{
       };
 
       loadNewsDetails();
+    
