@@ -128,8 +128,12 @@ loadNews();
         modalTitle.innerText = details.title;
         const detailImg = document.getElementById("detail-img");
         detailImg.innerHTML = `
-        <img src="${details.author.img}" class="img-fluid">
-        <h5>Author Name:${details.author.name ? details.author.name : "No Name Available"}</h5>
+       
+        
+        <img src="${details.image_url}" class="img-fluid">
+        <p>${details.details}</p>
+        <img src="${details.author.img}" height="50px" width="50px">
+        <p>Author Name:${details.author.name ? details.author.name : "No Name Available"}</p>
         <p>Publish Date:${details.author.published_date}</p>
         <p>Total View :${details.total_view ? details.total_view : "No data found"}<p>
         `;
