@@ -56,7 +56,7 @@ const displayCategories = categories =>{
          
 
 
-    const displayNews = (newses , name) =>{
+    const displayNews = (newses) =>{
         // console.log(newses.length);
       
         
@@ -74,7 +74,7 @@ const displayCategories = categories =>{
             `;
           } else {
             noNewsFound.innerHTML = `
-            <h3 class="text-success text-white mb-5 bg-secondary p-2">${newses.length} items found for category ${name}</h3>
+            <h3 class="text-success text-white mb-5 bg-secondary p-2">${newses.length} items found for category</h3>
             `;
           }
        
