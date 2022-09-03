@@ -108,7 +108,7 @@ const displayCategories = categories =>{
    
 };
  
-loadNews(allNews);
+loadNews();
 
   
     const loadNewsDetails = async (id) => {
